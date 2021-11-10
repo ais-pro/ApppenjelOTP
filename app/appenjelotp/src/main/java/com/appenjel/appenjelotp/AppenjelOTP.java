@@ -78,8 +78,8 @@ public class AppenjelOTP {
 
 
 
-    public interface VolleyCallbackJson {
-        void OnSuccessResponse(JSONObject response);
+    public String GetOtpCode(){
+        return otp_code;
     }
 
 
