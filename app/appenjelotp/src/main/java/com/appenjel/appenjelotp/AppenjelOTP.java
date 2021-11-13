@@ -1,6 +1,7 @@
 package com.appenjel.appenjelotp;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -30,7 +31,7 @@ public class AppenjelOTP {
         mRequest = Volley.newRequestQueue(context);
         mRequest.getCache().clear();
 
-        Base_url = "https://sms.appenjel.com/api/send-otp-sms";
+        Base_url = "https://smsapi.appenjel.com/api/send-otp-sms";
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
                 (Request.Method.POST, Base_url, postData, new Response.Listener<JSONObject>() {
@@ -49,8 +50,6 @@ public class AppenjelOTP {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
-
                         error.printStackTrace();
                         // TODO: Handle error
 
@@ -73,6 +72,10 @@ public class AppenjelOTP {
         mRequest.add(jsonObjectRequest);
         return false;
 
+    }
+
+    public boolean Match(String user_response_code){
+        return user_response_code.matches(otp_code);
     }
 
 
