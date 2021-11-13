@@ -27,6 +27,28 @@ Get Registration from here.
 	}
   
 
+## [maven,sbt,einingen installation](INSTALL.md)
+
+
+# Usage:
+```java
+        AppenjelOTP appenjelOTP = new AppenjelOTP();
+        appenjelOTP.SetAuthToken("your API token here");
+
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("number", "01710188764");
+            jsonObject.put("mask_type", "none_masking");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        appenjelOTP.send(getApplicationContext(), jsonObject, new VolleyCallbackJson() {
+            @Override
+            public void OnSuccessResponse(JSONObject response) {
+                Log.d("match",""+ appenjelOTP.Match("11225"));
+            }
+        });
+```
   
   
 
