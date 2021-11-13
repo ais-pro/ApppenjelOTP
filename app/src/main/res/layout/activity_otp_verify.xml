@@ -6,21 +6,29 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".MainActivity">
+    tools:context=".OtpVerify">
 
     <EditText
-        android:gravity="center"
-        android:id="@+id/phone_no"
+        android:id="@+id/tv_code"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="01710188764"
-        />
+        android:textAlignment="center"
+        android:hint="00000"
+        android:textSize="35sp" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/btn_verify"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/phone_no"
-        android:text="Login" />
+        android:text="Verify" />
+
+    <TextView
+        android:id="@+id/tv_resend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textSize="20dp"
+        android:text="Resend" />
+
 
 </LinearLayout>
