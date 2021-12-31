@@ -24,7 +24,7 @@ Get Registration from here.
 ### Add the dependency
 
 	dependencies {
-	        implementation 'com.github.ais-pro:ApppenjelOTP:Tag'
+	        implementation 'com.github.ais-pro:ApppenjelOTP:1.0.2'
 	}
   
 
